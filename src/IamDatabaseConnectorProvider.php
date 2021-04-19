@@ -1,6 +1,6 @@
 <?php
 
-namespace hatchetaustralia\DBAuth;
+namespace Hatchet\DBAuth;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
@@ -21,7 +21,7 @@ class IamDatabaseConnectorProvider extends ServiceProvider
             if (Arr::has($connection, 'use_iam_auth') && Arr::get($connection, 'use_iam_auth')) {
                 switch (Arr::get($connection, 'driver')) {
                     case "mysql":
-                        $this->app->bind('db.connector.mysql', \hatchetaustralia\DBAuth\Database\MySqlConnector::class);
+                        $this->app->bind('db.connector.mysql', \Hatchet\DBAuth\Database\MySqlConnector::class);
                         break;
                     case "pgsql":
                         Config::set('database.connections.'.$key.'.sslmode', 'verify-full');
@@ -35,7 +35,7 @@ class IamDatabaseConnectorProvider extends ServiceProvider
                         }
                         Config::set('database.connections.'.$key.'.sslrootcert', "'{$certPath}'");
 
-                        $this->app->bind('db.connector.pgsql', \hatchetaustralia\DBAuth\Database\PostgresConnector::class);
+                        $this->app->bind('db.connector.pgsql', \Hatchet\DBAuth\Database\PostgresConnector::class);
 
                         break;
                 }

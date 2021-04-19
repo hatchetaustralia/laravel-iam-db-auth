@@ -1,6 +1,6 @@
 <?php
 
-namespace hatchetaustralia\DBAuth\Database;
+namespace Hatchet\DBAuth\Database;
 
 use Exception;
 use Illuminate\Database\Connectors\PostgresConnector as DefaultPostgresConnector;
@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 use PDO;
-use hatchetaustralia\DBAuth\Auth\RDSTokenProvider;
+use Hatchet\DBAuth\Auth\RDSTokenProvider;
 
 class PostgresConnector extends DefaultPostgresConnector
 {

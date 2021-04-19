@@ -1,15 +1,14 @@
 <?php
 
-namespace hatchetaustralia\DBAuth\Database;
+namespace Hatchet\DBAuth\Database;
 
 use Exception;
 use Illuminate\Database\Connectors\MySqlConnector as DefaultMySqlConnector;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 use PDO;
-use hatchetaustralia\DBAuth\Auth\RDSTokenProvider;
+use Hatchet\DBAuth\Auth\RDSTokenProvider;
 
 class MySqlConnector extends DefaultMySqlConnector
 {
@@ -37,7 +36,7 @@ class MySqlConnector extends DefaultMySqlConnector
         $token_provider = new RDSTokenProvider($config);
         try {
             $password = $token_provider->getToken();
-            dd($password);
+            Log::debug($password);
             return $this->createPdoConnection(
                 $dsn, $username, $password, $options
             );

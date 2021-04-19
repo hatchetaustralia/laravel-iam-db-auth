@@ -1,8 +1,8 @@
 <?php
 
-namespace hatchetaustralia\DBAuth\Test;
+namespace Hatchet\DBAuth\Test;
 
-use hatchetaustralia\DBAuth\Providers\IamDatabaseConnectorProvider;
+use Hatchet\DBAuth\Providers\IamDatabaseConnectorProvider;
 
 class TestCase extends Orchestra\Testbench\TestCase
 {

@@ -1,13 +1,17 @@
 {
     "name": "hatchetaustralia/laravel-iam-db-auth",
     "description": "AWS IAM db auth package for laravel",
-    "version": "0.1.4",
+    "version": "0.1.1",
     "type": "package",
     "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Nitin Goyal",
             "email": "nitingoyal.dev@gmail.com"
+        },
+        {
+            "name": "Matt Hare",
+            "email": "matt@hatchet.com.au"
         }
     ],
     "scripts": {
@@ -22,18 +26,18 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "hatchetaustralia\\DBAuth\\": "src/"
+            "Hatchet\\DBAuth\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "hatchetaustralia\\DBAuth\\Test\\": "tests/"
+            "Hatchet\\DBAuth\\Test\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "hatchetaustralia\\DBAuth\\IamDatabaseConnectorProvider"
+                "Hatchet\\DBAuth\\IamDatabaseConnectorProvider"
             ],
             "aliases": {
             }

@@ -1,6 +1,6 @@
 <?php
 
-namespace hatchetaustralia\DBAuth\Auth;
+namespace Hatchet\DBAuth\Auth;
 
 use Aws\Credentials\CredentialProvider;
 use Aws\Rds\AuthTokenGenerator;
