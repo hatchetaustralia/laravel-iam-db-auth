@@ -7,6 +7,7 @@ use Illuminate\Database\Connectors\MySqlConnector as DefaultMySqlConnector;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
+use Illuminate\Support\Facades\Log;
 use PDO;
 use Hatchet\DBAuth\Auth\RDSTokenProvider;
 

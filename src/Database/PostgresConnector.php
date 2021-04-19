@@ -5,7 +5,6 @@ namespace Hatchet\DBAuth\Database;
 use Exception;
 use Illuminate\Database\Connectors\PostgresConnector as DefaultPostgresConnector;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 use PDO;
@@ -37,7 +36,6 @@ class PostgresConnector extends DefaultPostgresConnector
         $token_provider = new RDSTokenProvider($config);
         try {
             $password = $token_provider->getToken();
-            Log::debug($password);
             return $this->createPdoConnection(
                 $dsn, $username, $password, $options
             );
