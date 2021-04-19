@@ -37,7 +37,6 @@ class MySqlConnector extends DefaultMySqlConnector
         $token_provider = new RDSTokenProvider($config);
         try {
             $password = $token_provider->getToken();
-            Log::debug($password);
             return $this->createPdoConnection(
                 $dsn, $username, $password, $options
             );
